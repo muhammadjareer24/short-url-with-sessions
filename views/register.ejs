@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #1f2937;
+      }
+
+      /* Form Styles */
+      .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .form-container label {
+        font-weight: 600;
+        color: #4b5563;
+      }
+      .form-container input[type="text"],
+      .form-container input[type="password"] {
+        padding: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't overflow */
+      }
+      .form-container button {
+        padding: 12px 0;
+        margin-top: 1rem;
+
+        background-color: #2563eb;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+      .form-container button:hover {
+        background-color: #1e40af;
+      }
+
+      /* Forgot Password Section */
+      .forgot-password {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .forgot-password h4 {
+        color: #4b5563;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .forgot-password a {
+        margin-left: 5px;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      .forgot-password a:hover {
+        color: #1e40af;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+
+      <div class="form-container">
+        <form method="post" action="/user">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit">Register</button>
+          <div class="forgot-password">
+            <h4>Already have an account?<a href="/login">Login</a></h4>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
